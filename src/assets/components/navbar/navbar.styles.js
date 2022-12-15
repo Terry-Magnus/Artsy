@@ -1,17 +1,23 @@
-import { BsList, BsSearch, BsCart2, BsBell } from 'react-icons/bs';
+import { BsList, BsSearch, BsCart2, BsBell, BsXLg } from 'react-icons/bs';
 import styled from 'styled-components';
-
+const defaultIconStyles = {
+    color: "#000",
+    fontSize: "1.2rem",
+    fontWeight: 400,
+    cursor: "pointer",
+    marginLeft: "10px"
+}
 export const Nav = styled.nav`
 display: flex;
-justify-content: space-between;
-padding: 1.5rem 1.2rem;
+justify-content: space-around;
+padding: 2rem 1.2rem;
 `;
 export const NavMenu = styled.div`
 display: none;
 align-items: center;
-// @media screen and (min-width: 768px) {
-// 	display: flex;
-// }
+@media screen and (min-width: 768px) {
+	display: flex;
+}
 `;
 export const Logo = styled.div`
 font-weight: 600;
@@ -76,26 +82,47 @@ color: #808080;
 `;
 
 export const Search = styled(BsSearch)`
-color: #000;
-font-size: 1.2rem;
-font-weight: 400;
-cursor: pointer;
+@include ${defaultIconStyles}
 `;
 
 export const Cart = styled(BsCart2)`
-color: #000;
-font-size: 1.2rem;
-font-weight: 400;
-cursor: pointer;
-margin-left: 10px;
-`;
+@include ${defaultIconStyles}
 
+`;
+export const Close = styled(BsXLg)`
+@include ${defaultIconStyles}
+
+`
 export const Notifications = styled(BsBell)`
-color: #000;
-font-size: 1.2rem;
-font-weight: 400;
-cursor: pointer;
-margin-left: 10px;
+@include ${defaultIconStyles},
 `;
 
+export const OffCanvas = styled.div`
+position: fixed;
+width: 100%;
+top: 0;
+left: ${props => props.openCanvas ? 0 : "-100%"};
+background: #fff;
+color: #000;
+z-index: 2;
+height: 70vh;
+-webkit-transition: left .2s ease-in;
+`
+export const OffCanvasHeader = styled.div`
+display: flex;
+justify-content: space-between;
+padding: 1.5rem 1.2rem;
+`
+export const OffCanvasBody = styled.div`
+ display: flex;
+ flex-direction: column;
+ padding: 0 1.2rem;
+ justify-content: space between;
+ height: 70%;
+`
+export const OffCanvasFooter = styled.div`
+ display: flex;
+ justify-content: right;
+ padding: 0 3rem;
+`
 
