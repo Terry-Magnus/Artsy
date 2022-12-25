@@ -35,10 +35,10 @@ export default function NavBar() {
           <Close onClick={closeNav} />
         </OffCanvasHeader>
         <OffCanvasBody>
-          <NavLink to="/team">Home</NavLink>
-          <NavLink to="/blogs">Marketplace</NavLink>
-          <NavLink to="/sign-up">Auctions</NavLink>
-          <NavLink to="/sign-up">Drop</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/marketplace">Marketplace</NavLink>
+          <NavLink to="/auctions">Auctions</NavLink>
+          <NavLink to="/drop">Drop</NavLink>
         </OffCanvasBody>
         <OffCanvasFooter>
           <Notifications
@@ -58,10 +58,10 @@ export default function NavBar() {
 
         <Logo>Artsy.</Logo>
         <NavMenu>
-          <NavLink to="/team">Home</NavLink>
-          <NavLink to="/blogs">Marketplace</NavLink>
-          <NavLink to="/sign-up">Auctions</NavLink>
-          <NavLink to="/sign-up">Drop</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/marketplace">Marketplace</NavLink>
+          <NavLink to="/auctions">Auctions</NavLink>
+          <NavLink to="/drop">Drop</NavLink>
         </NavMenu>
         <div
           style={{
